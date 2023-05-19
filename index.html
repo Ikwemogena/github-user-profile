@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/github logo.png">
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="assets/github logo.png" alt="github logo" id="logo">
+        <h1>Get GitHub User Profile</h1>
+
+        <form id="form">
+            <input type="text" name="username" id="name-input" placeholder="Enter a github username" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="profile-card hidden">
+            <div class="profile">
+                <img class="profile-img" id="avatar">
+                <div>
+                    <h2 id="username"></h2>
+                <div>
+                    <div>
+                        <p id="bio"></p>
+                    </div>
+                    <ul class="data">
+                        <li id="followers"></li>
+                        <li id="following"></li>
+                        <li id="repos"></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="not-found hidden">
+            <h3>USER NOT FOUND</h3>
+        </div>
+    
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

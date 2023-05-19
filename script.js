@@ -58,7 +58,7 @@ function displayUser(user) {
     username.textContent = user.name;
     name.textContent = user.login
     followers.textContent = `${ user.followers } followers`;
-    following.textContent = `${ user.following } followers`;
+    following.textContent = `${ user.following } following`;
     repos.textContent =  `${ user.public_repos } repositories`;
     avatar.src = user.avatar_url;
     avatar.alt = user.name;

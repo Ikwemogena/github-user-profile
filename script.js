@@ -15,12 +15,9 @@ const followers = document.getElementById('followers');
 const following = document.getElementById('following');
 const repos = document.getElementById('repos');
 
-console.log(form);
-
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('form submitted');
-    // console.log(form.value);
+    e.preventDefault();    
+
     const nameInput = document.getElementById('name-input').value;
 
     getUsers(nameInput);
@@ -32,7 +29,7 @@ function getUsers(nameInput) {
     // console.log(nameInput)
     fetch(apiURL + nameInput)
     .then(res => res.json(
-        // console.log(res)
+        console.log(res)
     )) // parse the response into json
     .then(data => {
         console.log(data);
@@ -49,7 +46,7 @@ function getUsers(nameInput) {
             displayUser(data);
         }
     })
-    .catch(err => console.log(err)); // catch any errors
+    .catch(error => console.log(error)); // catch any errors
 }
 
 
@@ -65,5 +62,4 @@ function displayUser(user) {
     repos.textContent =  `${ user.public_repos } repositories`;
     avatar.src = user.avatar_url;
     avatar.alt = user.name;
-
 }
